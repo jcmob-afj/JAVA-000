@@ -1,0 +1,8 @@
+server:
+  port: 8088
+  tomcat:
+    uri-encoding: utf-8
+  error:
+    include-exception: true
+    include-message: always
+
