@@ -103,6 +103,7 @@ public class HttpOutboundHandler {
     
             response = new DefaultFullHttpResponse(HTTP_1_1, OK, Unpooled.wrappedBuffer(body));
             response.headers().set("Content-Type", "application/json");
+            response.headers().set("nio", fullRequest.headers().get("nio"));
             response.headers().setInt("Content-Length", Integer.parseInt(endpointResponse.getFirstHeader("Content-Length").getValue()));
     
 //            for (Header e : endpointResponse.getAllHeaders()) {
